@@ -3,14 +3,9 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
-    "local": "cross-env ENV=dev isDebug=dev vite",
-    "start": "cross-env ENV=dev vite",
-    "dev": "cross-env ENV=dev vite",
+    "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "build:dev": "cross-env ENV=dev npm run build",
-    "build:pre": "cross-env ENV=pre npm run build",
-    "build:prod": "cross-env ENV=prod npm run build",
     "lint": "eslint --ext=.js{,x},.ts{,x}, src --no-fix",
     "lint:fix": "eslint --ext=.js{,x},.ts{,x}, src --fix",
     "prettier": "prettier --check",
@@ -19,7 +14,6 @@
   },
   "dependencies": {
     "antd": "^5.6.4",
-    "classnames": "^2.3.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

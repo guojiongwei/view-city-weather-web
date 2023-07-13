@@ -9,7 +9,6 @@ specifiers:
   '@vitejs/plugin-react': ^3.1.0
   antd: ^5.6.4
   babel-eslint: ^10.1.0
-  classnames: ^2.3.2
   cross-env: ^7.0.3
   eslint: ^8.12.0
   eslint-config-airbnb: ^19.0.4
@@ -38,7 +37,6 @@ specifiers:
 
 dependencies:
   antd: 5.6.4_biqbaboplfbrettd7655fr4n2y
-  classnames: 2.3.2
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
 
