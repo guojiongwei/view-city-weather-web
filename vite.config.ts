@@ -1,8 +1,15 @@
 import react from '@vitejs/plugin-react'
 import { defineConfig } from 'vite'
+import CompressionWebpackPlugin from 'vite-plugin-compression'
 
 export default defineConfig({
-  plugins: [react()],
+  plugins: [
+    react() /** gzip压缩 */,
+    CompressionWebpackPlugin({
+      algorithm: 'gzip',
+      threshold: 10240, // 只有大小大于该值的资源会被处理。默认值是 10k
+    }),
+  ],
   resolve: {
     alias: [
       {
