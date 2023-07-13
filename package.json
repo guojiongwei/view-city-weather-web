@@ -1,0 +1,72 @@
+{
+  "name": "view-city-weather-server",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "local": "cross-env ENV=dev isDebug=dev vite",
+    "start": "cross-env ENV=dev vite",
+    "dev": "cross-env ENV=dev vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "build:dev": "cross-env ENV=dev npm run build",
+    "build:pre": "cross-env ENV=pre npm run build",
+    "build:prod": "cross-env ENV=prod npm run build",
+    "lint": "eslint --ext=.js{,x},.ts{,x}, src --no-fix",
+    "lint:fix": "eslint --ext=.js{,x},.ts{,x}, src --fix",
+    "prettier": "prettier --check",
+    "prettier:fix": "prettier --write",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "antd": "^5.6.4",
+    "classnames": "^2.3.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.14.0",
+    "@types/react": "^18.0.27",
+    "@types/react-dom": "^18.0.10",
+    "@typescript-eslint/eslint-plugin": "^5.18.0",
+    "@typescript-eslint/parser": "^5.18.0",
+    "@vitejs/plugin-react": "^3.1.0",
+    "babel-eslint": "^10.1.0",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.12.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-import-resolver-typescript": "^2.7.1",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.29.4",
+    "eslint-plugin-react-hooks": "^4.4.0",
+    "husky": "^7.0.4",
+    "less": "^4.1.3",
+    "lint-staged": "^12.3.7",
+    "postcss": "^8.4.24",
+    "postcss-less": "^6.0.0",
+    "prettier": "^2.6.2",
+    "stylelint": "^14.6.1",
+    "stylelint-config-css-modules": "^4.1.0",
+    "stylelint-config-standard": "^25.0.0",
+    "stylelint-order": "^5.0.0",
+    "typescript": "^4.9.3",
+    "vite": "^4.1.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js?(x),ts?(x)}": [
+      "eslint --max-warnings=0 --fix",
+      "prettier --write"
+    ],
+    "src/**/*.less": [
+      "stylelint --fix --custom-syntax postcss-less"
+    ]
+  }
+}

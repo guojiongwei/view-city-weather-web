@@ -1,0 +1,42 @@
+{
+  "compilerOptions": {
+    "sourceMap": true,
+    "target": "ESNext",
+    "jsx": "react-jsx",
+    "allowJs": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "importHelpers": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "declaration": false,
+    "noImplicitAny": false,
+    "noImplicitReturns": false,
+    "removeComments": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "strictNullChecks": false,
+    "noUnusedLocals": true,
+    "outDir": ".ts.out",
+    "lib": [
+      "scripthost",
+      "es2015",
+      "es2016",
+      "es2017",
+      "es2019",
+      "dom",
+      "dom.iterable",
+      "ESNext.String"
+    ],
+    "typeRoots": ["node_modules/@types", "./typings", "./@types"],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+  },
+  "exclude": ["dist", "node_modules"]
+}
